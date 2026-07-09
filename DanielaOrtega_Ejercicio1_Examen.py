@@ -81,9 +81,9 @@ def mostrar_empleados(lista_empleados):
 
     print("=== LISTA DE EMPLEADOS ===")
     for empleado in lista_empleados:
-        print(f"Nombre: {empleado['nombre']}")
-        print(f"Edad: {empleado['edad']}")
-        print(f"Salario: {empleado['salario']}")
+        print(f"Nombre: {empleado["nombre"]}")
+        print(f"Edad: {empleado["edad"]}")
+        print(f"Salario: {empleado["salario"]}")
         if empleado["activo"] == True:
             print("Estado: ACTIVO")
         else:
@@ -103,6 +103,8 @@ def ejecutar_programa():
                 posicion = buscar_empleado(lista_empleados, nombre)
                 if posicion != -1:
                     print(f"Empleado encontrado en posicion {posicion}: {lista_empleados[posicion]}")
+                else:
+                    print(f"Empleado {nombre} no encontrado en el registro.")
             case 3:
                 nombre = input("Ingrese nombre del empleado a eliminar: ")
                 eliminar_empleado(lista_empleados, nombre)
